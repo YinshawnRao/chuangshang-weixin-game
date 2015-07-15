@@ -1,0 +1,263 @@
+/*css reset*/
+html,body{
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	height: 100%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+	font-size: 62.5%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+
+/*首页*/
+.big_panel{
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	background: url(images/wrapper_bg.png) center no-repeat;
+	background-size: cover;
+	display: block;
+}
+.btn_group_s,.btn_group{
+	position: absolute;
+	left: 50%;
+	bottom: 75px;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	display: none;
+}
+/*.btn_group_s{
+	display: block!important;
+}*/
+.attend_btn img{
+	max-width: 204px;
+}
+.btn_group,.btn_group_s{
+	width: 270px;
+}
+.btn_group a img,.btn_group_s a img{
+	max-width: 124px;
+}
+.btn_group .attend_o,.btn_group_s .attend_btn{
+	float: left;
+}
+.btn_group .attend_s,.btn_group_s .attend_s{
+	float: right;
+}
+
+/*活动页*/
+.shadow{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	display: none;
+}
+/*有阴影*/
+.shadow.dark{
+	background: rgba(0,0,0,.7);
+}
+/*透明的*/
+.shadow.transparent{
+	background: rgba(0,0,0,0);
+}
+.shadow .sharing{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	display: none;
+}
+.shadow .sharing img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.shadow .prize_pan{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	width: 78%;
+	height: 100%;
+	background: url(images/prize_pan.png) center no-repeat;
+	background-size: 100% auto;
+}
+.shadow .prize_pan2{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	width: 98%;
+	height: 100%;
+	background: url(images/prize_pan2.png) center 10px no-repeat;
+	background-size: 100% auto;
+	display: none;
+}
+.prize_pan .share_button{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	width: 45%;
+}
+.prize_pan .share_button img{
+	max-width: 100%;
+}
+.shadow .info_pan{
+	width: 240px;
+	height: 160px;
+	border-radius: 10px;
+	background: #fff;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -120px;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	line-height: 80px;
+	display: none;
+}
+.shadow .info_pan.prize{
+	background: #ef3172;
+}
+.shadow .info_pan.end{
+	background: #4fbef8;
+}
+.activity{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(images/activity_bg.png) center no-repeat;
+	background-size: cover;
+	display: none;
+}
+.ele_light{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+.activity_banner{
+	position: absolute;
+	padding-top: 20px;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+}
+.activity_banner img,.ele_light img,.click_icon img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.grid{
+	position: absolute;
+	width: 65%;
+	height: 50%;
+	top: 33.33%;
+	left: 50%;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	font-size: 0;
+	border-radius: 10px;
+	background: #520222;
+}
+.grid:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.click_icon{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40%;	
+	z-index: 77;
+	animation:move_click .8s linear 0s infinite alternate;
+	-webkit-animation:move_click .8s linear 0s infinite alternate;
+}
+.grid .grid-cell{
+	width: 50%;
+	height: 33.33333333333%;
+	position: relative;
+	display: inline-block;
+	float: left;
+	background: url(images/bed_bg.png) center no-repeat;
+	background-size: contain;
+	border: 4px solid rgba(0,0,0,0);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid .grid-cell.bed-cover:after{
+	content: "";
+	position: absolute;
+	width: 94%;
+	height: 100%;
+	left: 50%;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	bottom: -3px;
+	background: url(images/bed_put.png) center no-repeat;
+	background-size: contain;
+}
+.grid .grid-cell:nth-child(2n+1){
+	border-right: 2px;
+}
+.grid .grid-cell:nth-child(2n){
+	border-left: 2px;
+}
+.grid .grid-cell .prize{
+	position: absolute;
+	width: 60px;
+	left: 50%;
+	bottom: 20px;
+	transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+}
+.headimgs{
+	position: absolute;
+	left: 17px;
+	top: 2px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.headimgs img{
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: top;
+}
+
+.pintu_info{
+	display: none;
+	background-color:rgb(139,88,182);
+}
+/*keyframes*/
+@-webkit-keyframes move_click{
+	0%{
+		-webkit-transform: translate(50%,-50%) scale(.95);
+		transform: translate(50%,-50%) scale(.95);
+	}
+	100%{
+		-webkit-transform: translate(50%,-50%) scale(1.05);
+		transform: translate(50%,-50%) scale(1.05);
+	}
+}
